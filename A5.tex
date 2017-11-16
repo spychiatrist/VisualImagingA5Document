@@ -1,0 +1,138 @@
+\title{Assignment 5: Virtual Reality Design}
+\author{
+Version 1.0\\
+Visual Imaging in the Electronic Age\\
+Assigned: Thursday, Nov. 9, 2017\\
+Due: \underline{Friday, December 1}\\
+}
+
+\date{\today}
+\documentclass[12pt]{article}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Virtual reality has rapidly emerged as an incredibly disruptive technology with the potential to change the way we live our lives.  What makes this possible is the convergence of many digital technologies, most of which have been improving at near-exponential growth rates.  These include processing power, bandwidth, display resolution, and digital photography.  With the continually shrinking price tag on VR devices, virtual reality will soon become commonplace with many applications ranging from design simulations to journalism to perhaps a more comprehensive means of communication.
+\vspace{10pt}
+
+Within this course, you have been introduced to many of the topics necessary to make virtual reality viable.  Perspective imaging, color science, rendering and display algorithms, geometry capture, the human visual perceptual system are all involved in great detail.  Now, you’ll be using them all together directly or indirectly to make a virtual reality experience.  Thus, in one sense, this final project is comprehensive in that it combines much of what has been presented.  As always, have fun, create, and explore!
+
+\end{abstract}
+
+\section{Project Description}
+The goal of this project is to design a virtual reality experience that goes beyond just showcasing one of your photogrammetric models from Assignment 3.  Your group will model a ‘shrine’ to your object, and put it in an outside scene in virtual reality using Unreal Engine 4.  Creativity is important!  Please take a look at the example shrine images and concept sketches from previous projects for inspiration.  You will design a VR experience around your environment that allows you to see it from any angle, and interact with it in a meaningful way.
+
+We will give you a VR-ready template project in order to get started quickly.  This should allow you to get your project working quickly and give you the flexibility to be creative.  You can and should go above and beyond our basic requirements, in the technical and in the design sense.
+
+\section{Requirements}
+
+There are two main parts that make the whole of the project: the modeling and design portion, and the technical implementation portion.  This is why we asked you to form groups with one ‘designer,’ one ‘engineer,’ and at least one other person (you can work in group sizes up to 4).  These requirements may seem small, but please note that they are deceptively in-depth.  You should begin everything early, because the resources we’re offering to help you are severely front-loaded, meaning you’ll get the most out of the project lecture and labs if you start now.
+
+That said, you should always work on this project as a group, together if you can.  There are some big requirements for everyone as a group outlined here:
+
+\begin{itemize}
+
+	\item \textbf{Two Sets of Personal ‘Check-In’ Meetings}
+	\begin{itemize}
+	
+		\item Two sub-assignments representing these meetings will be posted to CMS (cms.csuglab.cornell.edu).
+		\item You will choose from a listing of available TA times to come and talk about your progress in this project.
+		\item In the first CMS posting you will set up your group for the rest of the project.
+	
+	\end{itemize}
+	\item \textbf{One Final Presentation}
+	\begin{itemize}
+		\item After this is due, before finals, we will have a presentation expo day.
+		\item Your group will demo your VR creation live in front of an audience of your peers and invited esteemed faculty and staff.
+		\item You will have exactly 15 minutes of preparation time, and exactly 15 minutes of time to demonstrate.  
+		\item Any extra time spent preparing will be less time to present, and fewer points on your grade.
+	\end{itemize}
+	
+
+\end{itemize}
+
+\subsection{Technical Requirements}
+
+In order for the designers’ creations to shine, there needs to be a good interface between the perception of the user experiencing your project, and your created environment.  The Unreal Engine just as well as the VR headset itself both accomplish most of this work for you, but you will still need to ‘glue’ it all together.  As an engineer on this project, you will be responsible for programming and designing the interactions that a user will do in your experience.  These responsibilities include:
+
+\begin{itemize}
+
+	\item \textbf{Navigation/Locomotion System}
+	\begin{itemize}
+	
+		\item This is how you will move yourself around the environment in VR.
+		\item This supplements the room-scale walk-around capabilities of the Oculus Rift or Vive devices with the ability to move beyond where your limited physical space maps onto the unlimited virtual space.
+		\item Bare minimum: point-and-tap motion-controller teleportation system
+		\item There are many other ways to implement locomotion in VR
+	\end{itemize}
+	\item \textbf{Object Interaction System}
+	\begin{itemize}
+	
+		\item You should be able to reach down and pick up your imported object mesh to inspect it, and you should be able to set it back down where it was.
+		
+	\end{itemize}
+	
+	\item \textbf{360-Degree Environment Map Display}
+	\begin{itemize}
+	
+		\item This is the ‘background’ 
+				
+	\end{itemize}
+	
+\end{itemize}
+
+\subsection{Design Requirements}
+
+Design will be an important part of this project and will determine 50\% of your grade.  Within the modeling and design portion of the project, the designers will create and texture-map a model.  A huge part of a designer’s job is to design around how the end product of your work will look and function, so you will be responsible for importing your model into the UE4 scene, then going back to your draft and tweaking things, and repeating.  This is the same reason that you print your digital art: it’s not going to look the same in the final medium as it will in your drafting program. 
+
+You should spend the first couple of days on the project brainstorming a good idea to best utilize the 3D immersive quality of the medium. Do something interesting and dramatic if possible. Your final project environment should contain the following elements.
+
+
+\begin{itemize}
+
+	\item \textbf{A Navigation Sequence }
+	\begin{itemize}
+	
+		\item Does not need to be complex, can be a straight line.
+		\item Should provide an interesting 3D experience as one moves through your environment.
+	\end{itemize}
+	\item \textbf{A “Money Shot” }
+	\begin{itemize}
+	
+		\item Somewhere along your sequence there should be a particular point where the design is most awesome.
+		\item Provide a still scene grab of this view. 
+		\item You should sketch this out and get TA feedback early in your first scheduled TA meeting.
+	\end{itemize}
+	\item Your scene environment should provide views that include a \textbf{foreground, middleground and background.} 
+	\begin{itemize}
+	
+		\item Consider the degree of detail and methods used for best effect of each of these
+	\end{itemize}
+	\item \textbf{ Rich, well-scaled textures on surfaces. }
+	\begin{itemize}
+	
+		\item Try to minimize smeared textures.
+		\item Also maximize your UV space.
+	\end{itemize}
+	\item \textbf{Careful attention to lighting}
+	\begin{itemize}
+	
+		\item You will light your scene in the Unreal Engine
+		\item Much of this light is “faked” by baking in the lighting to textures (The “Build” button)
+	\end{itemize}
+\end{itemize}
+
+\section{Submissions}
+This project is due on \textbf{Friday, December 1st by 11:59 PM}.  On \textbf{Tuesday, December 5th}, the final day of the study period, we will \textbf{demo and present all projects}.  You must also register as a group on CMS by \textbf{Friday, November 10th.}  There will be a CMS assignment for this purpose only.  You will also schedule a personal meeting (as a group) with a TA by \textbf{Monday, November 13th.} This is also handled on CMS.  There will be another required group personal meeting before the deadline, date TBD.
+
+There will be two rooms for presentation to the course staff, and each will have a 15-minute on/off schedule.  Essentially one group presents while the other group prepare.  This means we can quickly get presentations for every group and ask questions of the group for grading, then move to the other group’s room which will be set up and ready to present.  It also means that you have to be timely with your presentation schedule (see general requirements).  There will be a staging area in the War Room, where the next 8 groups in line to present can share their projects and talk about them.
+
+
+\section{Resources}
+Of course, we don’t expect you to have access to high-performance computers and VR headsets to complete this assignment.  So we are making available 8 machines in the War Room with 8 Oculus Rift + Oculus Touch kits.  The schedule for work-hours on those machines will be made as open as possible so you will feasibly always have access to working computers.  As well, the Conference Room and the Vive Room will have full room-scale HTC VIve (SteamVR) devices in each for you to use freely for this project.  
+
+We expect to double the number of office hours during this time, so there will almost always be a TA ready to help you.  There will be 2.5 weeks of lab sections and a lecture focused specifically on how to use Unreal Engine 4, so there should be no confusion or getting stuck and hitting a wall\textit{\textbf{ as long as you start early and work consistently. }}
+
+\end{document}
+This is never printed
